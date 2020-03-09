@@ -45,3 +45,18 @@
   height: 100vh;
 }
 
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.swap-btn {
+  width: 50px;
+  margin: 0;
+}

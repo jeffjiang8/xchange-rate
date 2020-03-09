@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Converted extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="converted">
+                <p style={{"color": "white"}}>converted</p>
             </div>
         );
     }
