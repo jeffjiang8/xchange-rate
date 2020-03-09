@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Home from './Containers/Home'
 
 function App() {
+  // const key = process.env.REACT_APP_XCHANGE_API_KEY
   return (
     <Home />
   );

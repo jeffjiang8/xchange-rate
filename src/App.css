@@ -45,6 +45,11 @@
   height: 100vh;
 }
 
+.app-logo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .actions {
   display: flex;
   flex-direction: row;
@@ -53,7 +58,7 @@
 
 .btns {
   display: flex;
-  flex-direction: column;
+  flex-direction: col;
 }
 
 .swap-btn {
