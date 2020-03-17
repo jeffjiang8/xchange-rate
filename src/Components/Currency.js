@@ -5,8 +5,12 @@ class Currency extends Component {
         console.log(this.props.allOptions)
         return (
             <div className="currency">
-                {   this.props.allOptions
+                {   this.props.loading
                     ?
+                    ''
+                    
+                    
+                    :
                     
                     this.props.allOptions.map( (option, index) => {
                         return(
@@ -18,9 +22,6 @@ class Currency extends Component {
                         </form>
                         )
                     })
-                    
-                    :
-                    ''
                     
                 }
                 

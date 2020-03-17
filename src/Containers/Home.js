@@ -7,7 +7,8 @@ class Home extends Component {
     state = {
         allCurrency: '',
         selectedCurrency: '',
-        swapped: false
+        swapped: false,
+        loading: true
     }
 
     componentDidMount() {
@@ -17,7 +18,7 @@ class Home extends Component {
         // .then(console.log)
         fetch('https://openexchangerates.org/api/currencies.json')
         .then(resp => resp.json())
-        .then(json => this.setState({ allCurrency: json }))
+        .then(json => this.setState({ allCurrency: json, loading: false }))
     }
 
     handleSelected = () => {
@@ -55,7 +56,7 @@ class Home extends Component {
                             this.state.allCurrency
                             ?
                             <div className="actions">
-                                <Currency allOptions={this.state.allCurrency}/>
+                                <Currency allOptions={this.state.allCurrency} loading={this.state.loading}/>
                                     <div className="btns">
                                         <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
                                     </div>
