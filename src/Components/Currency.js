@@ -5,14 +5,25 @@ class Currency extends Component {
         console.log(this.props.allOptions)
         return (
             <div className="currency">
-                <form>
-                    <select>
-                        <option>Select Your Currency</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </form>
+                {   this.props.allOptions
+                    ?
+                    
+                    this.props.allOptions.map( (option, index) => {
+                        return(
+                        <form>
+                            <select>
+                                <option>Select Your Currency</option>
+                                <option id={index}>{option}</option>
+                            </select>
+                        </form>
+                        )
+                    })
+                    
+                    :
+                    ''
+                    
+                }
+                
             </div>
         );
     }

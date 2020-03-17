@@ -35,13 +35,37 @@ class Home extends Component {
         return (
             <div className="home">
                 <img src='../images/mula.gif' className="app-logo" alt="meh"/>
-                <div className="actions">
-                    <Currency allOptions={this.state.allCurrency}/>
-                    <div className="btns">
-                        <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
-                    </div>
-                    <Converted />
-                </div>
+                
+                    {
+                        this.state.swapped
+                        ?
+                            this.state.allCurrency
+                            ?
+                            <div className="actions">
+                                <Converted />
+                                    <div className="btns">
+                                        <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
+                                    </div>
+                                <Currency allOptions={this.state.allCurrency}/>
+                            </div>
+                            :
+                            ''
+
+                        :
+                            this.state.allCurrency
+                            ?
+                            <div className="actions">
+                                <Currency allOptions={this.state.allCurrency}/>
+                                    <div className="btns">
+                                        <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
+                                    </div>
+                                <Converted />
+                            </div>
+                            :
+                            ''
+                    }
+                    
+                
             </div>
         );
     }
