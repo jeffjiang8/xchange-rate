@@ -6,7 +6,8 @@ class Home extends Component {
 
     state = {
         allCurrency: '',
-        selectedCurrency: ''
+        selectedCurrency: '',
+        swapped: false
     }
 
     componentDidMount() {
@@ -23,15 +24,21 @@ class Home extends Component {
         console.log("selected")
     }
 
+    handleSwap = () => {
+        this.setState({
+            swapped: !this.state.swapped
+        })
+    }
+
     render() {
-        console.log(this.state.allCurrency)
+        console.log(this.state.swapped)
         return (
             <div className="home">
                 <img src='../images/mula.gif' className="app-logo" alt="meh"/>
                 <div className="actions">
                     <Currency allOptions={this.state.allCurrency}/>
                     <div className="btns">
-                        <button><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
+                        <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
                     </div>
                     <Converted />
                 </div>
