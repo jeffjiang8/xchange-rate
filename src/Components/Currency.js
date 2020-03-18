@@ -17,7 +17,7 @@ class Currency extends Component {
                         <form>
                             <select>
                                 <option>Select Your Currency</option>
-                                <option id={index}>{option}</option>
+                                <option id={index}>{option[0]}</option>
                             </select>
                         </form>
                         )
