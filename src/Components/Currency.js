@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 class Currency extends Component {
     render() {
-        console.log(this.props.allOptions)
+        console.log(this.props.loading)
         return (
             <div className="currency">
-                {   this.props.loading
+                {/* {   this.props.loading
                     ?
                     ''
                     
@@ -23,7 +23,7 @@ class Currency extends Component {
                         )
                     })
                     
-                }
+                } */}
                 
             </div>
         );

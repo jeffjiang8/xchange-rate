@@ -47,17 +47,8 @@ class Home extends Component {
                                     <div className="btns">
                                         <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
                                     </div>
-                                {/* <Currency allOptions={this.state.allCurrency}/> */}
-                                {
-                                    this.state.allCurrency.map((option, index) => {
-                                        <form>
-                                            <select>
-                                                <option>Select Your Currency</option>
-                                                <option id={index}>{option[0]}</option>
-                                            </select>
-                                        </form>
-                                    })
-                                }
+                                <Currency allOptions={this.state.allCurrency} loading={this.state.loading}/>
+
                                 
                             </div>
                             :
@@ -67,7 +58,7 @@ class Home extends Component {
                             this.state.allCurrency
                             ?
                             <div className="actions">
-                                {/* <Currency allOptions={this.state.allCurrency} loading={this.state.loading}/> */}
+                                <Currency allOptions={this.state.allCurrency} loading={this.state.loading}/>
                                     <div className="btns">
                                         <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
                                     </div>
