@@ -15,7 +15,7 @@ class Currency extends Component {
     }
 
     render() {
-        console.log(this.state.allCurrency)
+        // console.log(this.state.allCurrency)
         return (
             <div className="currency">
                 {   
@@ -25,16 +25,17 @@ class Currency extends Component {
                     :
                         this.state.allCurrency
                         ?
-                        this.state.allCurrency.map( (option, index) => {
-                            return(
-                            <form>
-                                <select>
-                                    <option>Select Your Currency</option>
-                                    <option id={index}>{option}</option>
-                                </select>
-                            </form>
-                            )
-                        })
+                        console.log(this.state.allCurrency)
+                        // this.state.allCurrency.map( (option, index) => {
+                        //     return(
+                        //     <form>
+                        //         <select>
+                        //             <option>Select Your Currency</option>
+                        //             <option id={index}>{option}</option>
+                        //         </select>
+                        //     </form>
+                        //     )
+                        // })
                         :
                         ""
                 }
