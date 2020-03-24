@@ -47,14 +47,14 @@ class Home extends Component {
                                     <div className="btns">
                                         <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
                                     </div>
-                                <Currency allOptions={this.state.allCurrency} loading={this.state.loading}/>
+                                <Currency/>
 
                                 
                             </div>
                             
                         :
                             <div className="actions">
-                                <Currency allOptions={this.state.allCurrency} loading={this.state.loading}/>
+                                <Currency/>
                                     <div className="btns">
                                         <button onClick={this.handleSwap}><img src="../images/swap.png" alt="meh" className="swap-btn"/></button>
                                     </div>
