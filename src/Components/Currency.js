@@ -8,11 +8,11 @@ class Currency extends Component {
         loading: true
     }
 
-    componentDidMount() {
-        fetch('https://openexchangerates.org/api/currencies.json')
-        .then(resp => resp.json())
-        .then(json => this.setState({ allCurrency: json, loading: false }))
-    }
+    // componentDidMount() {
+    //     fetch('https://openexchangerates.org/api/currencies.json')
+    //     .then(resp => resp.json())
+    //     .then(json => this.setState({ allCurrency: json, loading: false }))
+    // }
 
     render() {
         // console.log(this.state.allCurrency)
