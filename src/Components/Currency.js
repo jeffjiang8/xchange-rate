@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Currency extends Component {
 
     state = {
-        allCurrency: '',
+        allCurrency: [],
         selectedCurrency: '',
         loading: true
     }
