@@ -5,7 +5,7 @@ import Converted from '../Components/Converted'
 class Home extends Component {
 
     state = {
-        allCurrency: [],
+        allCurrency: {},
         selectedCurrency: '',
         swapped: true,
         loading: true
@@ -32,7 +32,7 @@ class Home extends Component {
     }
 
     render() {
-        console.log(this.state.swapped)
+        console.log(this.state.allCurrency)
         return (
             <>
 
