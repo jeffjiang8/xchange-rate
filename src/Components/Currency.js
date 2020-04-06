@@ -14,6 +14,21 @@ class Currency extends Component {
         .then(json => this.setState({ allCurrencies: json, loading: false }))
     }
 
+    renderCurrencyDropdown = ()=>{
+        return(
+            this.state.allCurrencies.map((currency, index) => {
+                    return (
+                        <form>
+                            <select>
+                                <option>Select Your Currency</option>
+                                <option id={index}>{currency}</option>
+                            </select>
+                        </form>
+                    )
+                })
+        )
+    }
+
     render() {
         console.log(this.state.allCurrencies)
         console.log(this.state.loading)
@@ -23,6 +38,7 @@ class Currency extends Component {
         return (
             <div className="currency">
                 { 
+                    this.renderCurrencyDropdown()
                     // this.state.allCurrencies.map((currency, index) => {
                     //     return (
                     //         <form>
