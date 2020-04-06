@@ -8,47 +8,47 @@ class Currency extends Component {
         loading: true
     }
 
-    componentDidMount() {
-        fetch('https://openexchangerates.org/api/currencies.json')
-        .then(resp => resp.json())
-        .then(json => this.setState({ allCurrency: json, loading: false }))
-    }
+    // componentDidMount() {
+    //     fetch('https://openexchangerates.org/api/currencies.json')
+    //     .then(resp => resp.json())
+    //     .then(json => this.setState({ allCurrency: json, loading: false }))
+    // }
 
     render() {
-        // console.log(this.state.allCurrency)
+        console.log(this.props.currencies)
         return (
             <div className="currency">
                 {   
-                    this.state.loading
+                    this.props.loading
                     ?
                     ''
                     :
-                    // this.state.allCurrency.map((option, index) => {
-                    //     return (
-                    //         <form>
-                    //             <select>
-                    //                 <option>Select Your Currency</option>
-                    //                 <option id={index}>{option}</option>
-                    //             </select>
-                    //         </form>
-                    //     )
-                    // })
-                    // console.log(this.state.allCurrency)
-                        this.state.allCurrency
-                        ?
-                        // console.log(this.state.allCurrency)
-                        this.state.allCurrency.map( (option, index) => {
-                            return(
+                    this.props.currencies.map((currency, index) => {
+                        return (
                             <form>
                                 <select>
                                     <option>Select Your Currency</option>
-                                    <option id={index}>{option}</option>
+                                    <option id={index}>{currency}</option>
                                 </select>
                             </form>
-                            )
-                        })
-                        :
-                        ""
+                        )
+                    })
+                    // console.log(this.state.allCurrency)
+                        // this.state.allCurrency
+                        // ?
+                        // console.log(this.state.allCurrency)
+                        // this.state.allCurrency.map( (option, index) => {
+                        //     return(
+                        //     <form>
+                        //         <select>
+                        //             <option>Select Your Currency</option>
+                        //             <option id={index}>{option}</option>
+                        //         </select>
+                        //     </form>
+                        //     )
+                        // })
+                        // :
+                        // ""
                 }
             </div>
         );
