@@ -11,15 +11,15 @@ class Home extends Component {
         loading: true
     }
 
-    componentDidMount() {
-    //     // const key = process.env.REACT_APP_XCHANGE_API_KEY
-    //     // fetch(`https://prime.exchangerate-api.com/v5/${key}/latest/CNY`)
-    //     // .then(resp => resp.json())
-    //     // .then(console.log)
-        fetch('https://openexchangerates.org/api/currencies.json')
-        .then(resp => resp.json())
-        .then(json => this.setState({ allCurrency: json, loading: false }))
-    }
+    // componentDidMount() {
+    // //     // const key = process.env.REACT_APP_XCHANGE_API_KEY
+    // //     // fetch(`https://prime.exchangerate-api.com/v5/${key}/latest/CNY`)
+    // //     // .then(resp => resp.json())
+    // //     // .then(console.log)
+    //     fetch('https://openexchangerates.org/api/currencies.json')
+    //     .then(resp => resp.json())
+    //     .then(json => this.setState({ allCurrency: json, loading: false }))
+    // }
 
     handleSelected = () => {
         console.log("selected")
